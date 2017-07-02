@@ -7,7 +7,7 @@ public class SetGameMenu extends javax.swing.JPanel {
 
     private JPanel mainPanel;
     private JFrame mainFrame;
-    
+
     GamePanel gamePanel;
 
 
@@ -120,16 +120,16 @@ public class SetGameMenu extends javax.swing.JPanel {
         secondPasswordText.setBounds(300 + x,150,150,40);
         this.add(secondPasswordText);
 
-       playButton.setBounds(500,300,120,30);
-       this.add(playButton);
+        playButton.setBounds(500,300,120,30);
+        this.add(playButton);
 
 
     }// </editor-fold>//GEN-END:initComponents
 
 
     private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
-        
-        mainFrame.setContentPane(mainPanel);      
+
+        mainFrame.setContentPane(mainPanel);
         mainFrame.invalidate();
         mainFrame.validate();
     }//GEN-LAST:event_backActionPerformed
@@ -141,20 +141,56 @@ public class SetGameMenu extends javax.swing.JPanel {
 
     private void playButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playButtonActionPerformed
 
-        
 
-        
+        String firstUserName = firstUserNameText.getText();
+        String secondUserName = secondUserNameText.getText();
+        String firstPassword = firstPasswordText.getText();
+        String secondPassword = secondPasswordText.getText();
+
+
+
+
+
+        if(firstUserName.isEmpty() || secondUserName.isEmpty() || firstPassword.isEmpty() || secondPassword.isEmpty()){
+            JOptionPane.showMessageDialog(this.mainFrame,"Please fill username and password for each user!");
+
+        }
+        else{
+
+            if(SQLiteJDBC.login(firstUserName,firstPassword) && SQLiteJDBC.login(secondUserName,secondPassword))
+            {
+                gamePanel = new GamePanel(this,firstUserName,secondUserName);
+
+                // gamePanel.setPlayerNames(firstUserName, secondUserName);
+
+                //gamePanel.updateCurrentRound(round);
+
+                gamePanel.setMainMenu(mainPanel);
+                gamePanel.setMainFrame(mainFrame);
+
+                mainFrame.setContentPane(gamePanel);
+                mainFrame.setSize(new Dimension(1280,1000));
+                mainFrame.invalidate();
+                mainFrame.validate();
+            }
+            else{
+                JOptionPane.showMessageDialog(this.mainFrame,"Invalid username/password!");
+            }
+
+        }
+
+
     }//GEN-LAST:event_playButtonActionPerformed
-    
-    public void setMainMenu(JPanel mainPanel){      
-       this.mainPanel =  mainPanel;
+
+    public void setMainMenu(JPanel mainPanel){
+        this.mainPanel =  mainPanel;
     }
-    
+
     public void setMainFrame(JFrame mainFrame){
         this.mainFrame = mainFrame;
     }
 
-    
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton back;
     private javax.swing.JSeparator jSeparator1;
