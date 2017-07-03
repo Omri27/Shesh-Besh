@@ -35,7 +35,7 @@ public class GamePanel extends javax.swing.JPanel {
         player2ScrLabel = new javax.swing.JLabel();
         boardPanel1 = new BoardPanel(this);
 
-        setBackground(java.awt.SystemColor.activeCaption);
+        setBackground(new java.awt.Color(153, 205, 155));
         setMaximumSize(new java.awt.Dimension(1280, 1000));
         setMinimumSize(new java.awt.Dimension(1280, 1000));
         setName(""); // NOI18N
@@ -56,10 +56,10 @@ public class GamePanel extends javax.swing.JPanel {
         playerIDLabel2.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
 
         dice1Label.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        dice1Label.setText("sheshbesh.Dice 1:");
+        dice1Label.setText("Dice 1:");
 
         dice2Label.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        dice2Label.setText("sheshbesh.Dice 2:");
+        dice2Label.setText("Dice 2:");
 
         hyphenLabel.setText("-");
 

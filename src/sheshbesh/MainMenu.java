@@ -23,10 +23,10 @@ public class MainMenu extends javax.swing.JFrame {
         backgammonGame = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("sheshbesh.Backgammon Game");
+        setTitle("Backgammon Game");
         setLocation(new java.awt.Point(350, 200));
 
-        mainPanel.setBackground(new java.awt.Color(60, 132, 62));
+        mainPanel.setBackground(new java.awt.Color(153, 205, 155));
         mainPanel.setPreferredSize(new java.awt.Dimension(1158, 598));
 
         signUp.setFont(new java.awt.Font("Tahoma", 0, 25)); // NOI18N
@@ -75,7 +75,7 @@ public class MainMenu extends javax.swing.JFrame {
 
 
         backgammonGame.setFont(new java.awt.Font("Lithos Pro Regular", 0, 50)); // NOI18N
-        backgammonGame.setText("sheshbesh.Backgammon Game");
+        backgammonGame.setText("Backgammon Game");
 
         javax.swing.GroupLayout mainPanelLayout = new javax.swing.GroupLayout(mainPanel);
         mainPanel.setLayout(mainPanelLayout);

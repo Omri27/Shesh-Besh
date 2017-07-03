@@ -36,7 +36,7 @@ public class SetGameMenu extends javax.swing.JPanel {
         back = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
 
-        setBackground(new java.awt.Color(248, 255, 184));
+        setBackground(new java.awt.Color(153, 205, 155));
 
         firstUserNameLabel.setFont(new java.awt.Font("Tahoma", 0, 25)); // NOI18N
         firstUserNameLabel.setText("Player1 UserName:");

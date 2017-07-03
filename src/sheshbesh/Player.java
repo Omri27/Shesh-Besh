@@ -14,7 +14,7 @@ public class Player {
     public Player(){
         score = 0;
         checkerSet = null;
-        playerName = "sheshbesh.Player";
+        playerName = "Player";
     }
     
     public Player(String playerName, CheckerSet set){

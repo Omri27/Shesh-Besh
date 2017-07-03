@@ -543,8 +543,8 @@ public class BoardPanel extends JPanel {
         dice1.roll();
         dice2.roll();
         System.out.print("Roll Btn Pressed -> ");
-        System.out.print("Die1: " + dice1.getValue());
-        System.out.println(" Die2: " + dice2.getValue());
+        System.out.print("Dice1: " + dice1.getValue());
+        System.out.println(" Dice2: " + dice2.getValue());
         
         if(dice1.getValue() == dice2.getValue())
             dieLeft = dice1.getValue()*4;

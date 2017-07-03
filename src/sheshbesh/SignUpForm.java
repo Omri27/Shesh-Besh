@@ -35,7 +35,7 @@ public class SignUpForm extends JFrame {
 
 
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("sheshbesh.Backgammon Game");
+        setTitle("Backgammon Game");
         setLocation(new java.awt.Point(350, 200));
         mainPanel.setPreferredSize(new Dimension(600,400));
         setResizable(false);
